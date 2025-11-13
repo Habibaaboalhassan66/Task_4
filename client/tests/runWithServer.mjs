@@ -41,7 +41,9 @@ const jestProcess = spawn(process.execPath, jestArgs, {
   stdio: 'inherit'
 });
 
-const jestExitCode = await new Promise((resolve) => jestProcess.on('exit', (code) => resolve(code ?? 1)));
+const jestExitCode = await new Promise((resolve) =>
+  jestProcess.on('exit', (code) => resolve(code ?? 1))
+);
 
 serverProcess.kill();
 await new Promise((resolve) => serverProcess.on('exit', resolve));
