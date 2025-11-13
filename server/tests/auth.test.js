@@ -96,7 +96,6 @@ describe('Authentication controller integration', () => {
     const response = await fetch(`${baseUrl}/auth/me`, {
       headers: { Authorization: `Bearer ${issuedToken}` }
     });
-cd "C:\Users\TarekMaher\Desktop\task 4\Task_4"
 
     const payload = await response.json();
 
